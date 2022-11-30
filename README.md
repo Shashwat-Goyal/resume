@@ -1,34 +1,119 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a `Resume Builder` for users who would like to showcase their professional experience as a full-fledged website. This application works with the [`Contentful CMS (Content Management System)`](https://www.contentful.com/) to render content.
+
+Th use of CMS has been done to make sure that in future once the resume is ready we don't have to make any code changes, just the CMS changes would suffice and update your resume website automatically.
+
+## Demo
+
+Here is a [demo](https://shashwat-goyal.netlify.app/) for reference:
 
 ## Getting Started
 
-First, run the development server:
+ - First, clone the repository code / download as zip.
+ - Create an account on [contenful](https://www.contentful.com/).
+ - Once you signup, you will be assigned your own space where you can go ahead and create your content.
+ - Please note that you will have to design your resume content as shown in the entity relationship diagram below to be able to make the application work correctly.
+![alt text](https://github.com/Shashwat-Goyal/resume/blob/main/Entity%20Relationship%20Diagram.png?raw=true)
+ - The code below shows the same relationship as JSON.
 
 ```bash
+{
+    "profile": {
+        "firstName": "Shashwat",
+        "lastName": "Goyal",
+        "designation": "Front-End & Web Developer",
+        "dateOfBirth": "1995-07-15T00:00-05:00",
+        "phoneNumber": "959-529-1931",
+        "email": "shashwatgoyal05@gmail.com",
+        "address": {
+            "addressLine1": "375 Hudson Street",
+            "city": "New York",
+            "state": "NY",
+            "country": "United States",
+            "zipcode": "10014"
+        }
+    },
+    "testimonials": [
+        {
+            "name": "Devinder Singh",
+            "designation": "Byteline Inc.",
+            "date": "2022-09-18T00:00-05:00",
+            "recommendation": "Shashwat is a great developer! He delivers high-quality work on time. Always very adjusting to taking on tasks outside his comfort zone. Can easily pick new technical skills.",
+            "profileImage": "Image"
+        }
+    ],
+    "socialConnections": [
+        {
+            "fields": {
+                "url": "https://medium.com/@shashwatgoyal05",
+                "title": "Know more on Medium",
+                "icon": "medium"
+            }
+        }
+    ],
+    "assets": {
+        "cover": "Image",
+        "profileImage": "Image",
+        "avatar": "Image"
+    },
+    "skills": [
+        {
+            "name": "Javascript",
+            "proficiency": 90
+        }
+    ],
+    "experiences": {
+        "title": "Professional Experience",
+        "education": [
+            {
+                "degree": "Bachelor of Technology in Electrical Engineering",
+                "yearStart": 2012,
+                "yearEnd": 2016,
+                "institution": "Dehradun Institute of Technology, Uttarakhand Technical University, Dehradun",
+                "result": "81.24%"
+            }
+        ],
+        "professionalExperience": [
+            {
+                "designation": "Senior Associate Xperience Technology",
+                "yearStart": 2020,
+                "organization": "Publicis Sapient, New York, NY",
+                "details": [
+                    "Develop interactive web applications using industry best practices to deliver high value and quality to Publicis Sapient clients.",
+                    "Goldman Sachs : Worked in the Goldman Sachs account for building coaching applications that helps clients with their financial stability. Worked on React.js and GQL with TDD to deliver high quality web interfaces."
+                ]
+            }
+        ]
+    },
+    "portfolio": [
+        {
+            "image": "Image",
+            "url": "https://www.byteline.io/"
+        }
+    ]
+}
+```
+ - Once you have finished adding the content on contentful, you will be needing a space id and access token to link the application with your contentful account. You can find it easily in the `Settings -> Api Keys` tab in the contentful website header.
+ - Copy your space id and access token and then create a new file in your application at the root level `env.local` and add the following values in that file.
+ ```bash
+CONTENTFUL_SPACE_ID=YOUR_SPACE_ID
+CONTENTFUL_ACCESS_TOKEN=YOUR_ACCESS_TOKEN
+ ```
+
+Now, run the development server
+```bash
 npm run dev
-# or
-yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+You would see your resume in the browser with all the content coming from contentful CMS having all your information.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Deployment
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+For deployment we can use any platform like Netlify, Heroku or Vercel to deploy the app
 
-## Learn More
+## Additional Steps
 
-To learn more about Next.js, take a look at the following resources:
+There is an option of configuring webhooks in contenful which will help in triggering auto deployment of your resume whenever any content change is made. This is beneficial as you just have to update the content whenever needed and rest takes care of itself.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Feel free to raise an issue incase of any issues/concerns. Happy to help :)

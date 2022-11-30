@@ -30,6 +30,7 @@ export async function getStaticProps() {
 }
 
 const Home: NextPage = ({ user }: any) => {
+  console.log(user, "user");
   const { assets, experiences, profile, skills, socialConnections, testimonials, portfolio } = user.fields;
   return (
     <div>
