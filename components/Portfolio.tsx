@@ -16,7 +16,7 @@ export const Portfolio = ({ portfolio }: any) => {
               return (
                 <div className="col-lg-4 col-md-6 portfolio-item filter-app" key={index}>
                   <div className="portfolio-wrap" onClick={() => window.open(portfolioItem.fields.url)}>
-                    <img src={`https://${portfolioItem.fields.image.fields.file.url}`} className="img-fluid portfolio-image" alt="" />
+                    <img src={`https:${portfolioItem.fields.image.fields.file.url}`} className="img-fluid portfolio-image" alt="" />
                   </div>
                 </div>
               )

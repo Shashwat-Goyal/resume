@@ -20,7 +20,7 @@ export const About = ({ assets, profile }: any) => {
         <div className="row">
           <div className="col-lg-4" data-aos="fade-right">
             <img
-              src={`https://${assets.fields.profileImage.fields.file.url}`}
+              src={`https:${assets.fields.profileImage.fields.file.url}`}
               className="img-fluid"
               alt=""
 							width={420}
