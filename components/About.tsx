@@ -42,7 +42,7 @@ export const About = ({ assets, profile }: any) => {
                   </li>
                   <li>
                     <i className="bi bi-chevron-right"></i>{" "}
-                    <strong>Phone:</strong> <span>+1 {phoneNumber}</span>
+                    <strong>Phone:</strong> <span><a href={`tel:+1${phoneNumber}`}>+1 {phoneNumber}</a></span>
                   </li>
                   <li>
                     <i className="bi bi-chevron-right"></i>{" "}
@@ -58,7 +58,7 @@ export const About = ({ assets, profile }: any) => {
                   </li>
                   <li>
                     <i className="bi bi-chevron-right"></i>{" "}
-                    <strong>Email:</strong> <span>{email}</span>
+                    <strong>Email:</strong> <span><a href={`mailto:${email}`}>{email}</a></span>
                   </li>
                   <li>
                     <i className="bi bi-chevron-right"></i>{" "}

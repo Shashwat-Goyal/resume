@@ -21,7 +21,7 @@ export const Resume = ({ experiences }: any) => {
                   <div key={index} className="resume-item">
                     <h4>{designation}</h4>
                     <h5>{yearStart} - {yearEnd || 'Present'}</h5>
-                    <p><em>{organization}</em></p>
+                    <p><strong>{organization}</strong></p>
                     <ul>
                       {
                         details.map((detail: string) => (<li key={detail}>{detail}</li>))
@@ -42,7 +42,7 @@ export const Resume = ({ experiences }: any) => {
                   <div key={index} className="resume-item">
                     <h4>{degree}</h4>
                     <h5>{yearStart} - {yearEnd}</h5>
-                    <p><em>{institution}</em></p>
+                    <p>{institution}</p>
                   </div>
                 )
               })
