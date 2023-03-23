@@ -26,13 +26,13 @@ export const Contact = ({profile }: any) => {
               <div className="email">
                 <i className="bi bi-envelope"></i>
                 <h4>Email:</h4>
-                <p>{email}</p>
+                <p><a href={`mailto:${email}`}>{email}</a></p>
               </div>
 
               <div className="phone">
                 <i className="bi bi-phone"></i>
                 <h4>Call:</h4>
-                <p>+1 {phoneNumber}</p>
+                <p><a href={`tel:+1{phoneNumber}`}>+1 {phoneNumber}</a></p>
               </div>
               <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3023.5217608052562!2d-74.009554!3d40.7285433!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259f2a4334b93%3A0x4e08cf320e31c304!2s375%20Hudson%20St%2C%20New%20York%2C%20NY%2010014!5e0!3m2!1sen!2sus!4v1663736356780!5m2!1sen!2sus" frameBorder={0} style={{border:0, width: '100%', height: '290px' }} allowFullScreen></iframe>
             </div>
