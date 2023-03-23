@@ -7,7 +7,7 @@ export const Testimonials = ({ testimonials }: any) => {
 
         <div className="section-title">
           <h2>Testimonials</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p>Testimonials from previous colleagues and clients highlighting my strong communication skills, technical proficiency, attention to detail, and ability to deliver high-quality work within tight deadlines.</p>
         </div>
 
         <div className="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">

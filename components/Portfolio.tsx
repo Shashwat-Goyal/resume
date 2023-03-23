@@ -8,7 +8,7 @@ export const Portfolio = ({ portfolio }: any) => {
 
         <div className="section-title">
           <h2>Portfolio</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p>Portfolio showcasing diverse and successful web projects demonstrating my skills and expertise in the field of responsive design, user experience, and cutting-edge front-end technologies.</p>
         </div>
         <div className="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
           {

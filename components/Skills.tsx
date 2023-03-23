@@ -7,7 +7,7 @@ export const Skills = ({ skills }: any) => {
 
         <div className="section-title">
           <h2>Skills</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p>An overview of my technical competencies, including programming languages, software tools, and industry-specific platforms or technologies.</p>
         </div>
 
         <div className="row skills-content">
